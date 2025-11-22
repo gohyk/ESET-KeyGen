@@ -53,6 +53,7 @@ on:
         options:
           - main
           - test
+          - dev
         default: main
 
 jobs:
