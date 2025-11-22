@@ -132,9 +132,9 @@ class EsetKeygen(object):
         logging.info(f'[{self.mode}] Request sending...')
         console_log(f'\n[{self.mode}] Request sending...', INFO, silent_mode=SILENT_MODE)
         self.driver.get('https://home.eset.com/onboarding/subscriptions')
-        uCE(self.driver, f"return {GET_EBAV}('button', 'data-label', 'onboarding-add-subscription-protect-card-trial') != null")
+        uCE(self.driver, f"return {GET_EBAV}('label', 'data-label', 'onboarding-add-subscription-protect-card-trial') != null")
         if self.mode == 'ESET HOME':
-            uCE(self.driver, f"return {CLICK_WITH_BOOL}({GET_EBAV}('button', 'data-label', 'onboarding-add-subscription-protect-card-trial'))")
+            uCE(self.driver, f"return {CLICK_WITH_BOOL}({GET_EBAV}('label', 'data-label', 'onboarding-add-subscription-protect-card-trial'))")
         elif self.mode == 'SMALL BUSINESS':
             uCE(self.driver, f"return {CLICK_WITH_BOOL}({GET_EBAV}('button', 'data-label', 'subscription-choose-trial-esbs-card-button'))")
         try:
