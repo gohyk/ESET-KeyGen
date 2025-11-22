@@ -60,7 +60,10 @@ class EsetRegister(object):
         logging.info('[PASSWD] Register page is loaded!')
         console_log('[PASSWD] Register page is loaded!', OK, silent_mode=SILENT_MODE)
         exec_js(f"return {GET_EBID}('password')").send_keys(self.eset_password)
-        
+
+        logging.info(f'Email: {self.email_obj.email}')
+        logging.info(f'Password: {self.eset_password}')
+
         # Select Ukraine country
         logging.info('Selecting the country...')
         if exec_js(f"return {GET_EBCN}('select__single-value css-1dimb5e-singleValue')[0]").text != 'Ukraine':
