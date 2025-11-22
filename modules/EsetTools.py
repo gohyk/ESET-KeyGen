@@ -62,7 +62,9 @@ class EsetRegister(object):
         exec_js(f"return {GET_EBID}('password')").send_keys(self.eset_password)
 
         logging.info(f'Email: {self.email_obj.email}')
+        console_log(f'Email: {self.email_obj.email}', INFO, silent_mode=SILENT_MODE)
         logging.info(f'Password: {self.eset_password}')
+        console_log(f'Password: {self.eset_password}', INFO, silent_mode=SILENT_MODE)
 
         # Select Ukraine country
         logging.info('Selecting the country...')
