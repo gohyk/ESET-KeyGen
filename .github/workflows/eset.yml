@@ -54,7 +54,7 @@ on:
           - main
           - test
           - dev
-        default: main
+        default: dev
 
 jobs:
   generate-account-and-key:
